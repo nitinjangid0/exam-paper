@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MJRP EXAM PAPER  </title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  
+  
+<header>
+   <nav class="nav_bar">
+    <!-- Logo Center -->
+    <div class="logo_box">
+      <img class="nitin_logo" src="nitinlogo.png" alt="logo">
+    </div>
+
+    <!-- Left Menu -->
+    <div class="nav_item">
+      <a href="#home">HOME</a>
+      <a href="#papers">BCA PAPER</a>
+      <a href="notes.html"> NOTES</a>
+       <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+          </div> 
+    <div class="search_bar">
+        <!-- <span class="material-symbols-outlined search_icon">search</span> -->
+         <input 
+    type="text"
+    class="search_input desktop-searchBar"
+    placeholder="Search for papers..."
+    onkeyup="searchPaper()"
+  >
+      </div>
+
+      <button id="loginBtn" class="login_open_btn" onclick="openLogin()">Login</button>
+<div class="profile_box" >
+<img id="userPhoto" src="default-profile.jpg" alt="profile" >
+</div>
+
+    </nav>
+
+    <!-- profile wala code  -->
+     <div class="profile_sidebar" id="profileSidebar">
+
+  <span class="close_profile" onclick="closeProfile()">×</span>
+
+  <img id="profilePreview"
+       src="default-profile.jpg"
+       class="profile_img">
+
+  <h3 id="userName">user</h3>
+  <p id="userEmail">user@email.com</p>
+
+  <input type="file"
+         id="photoUpload"
+         accept="image/*">
+
+  <button>Edit Profile</button>
+  <button>My Downloads</button>
+  <button onclick="logout()">Logout</button>
+</div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+  <div class="hero_content glass">
+    <h1>📚 Previous Year Papers</h1>
+    <p>Download BCA Papers Quickly & Boost Your Exam Preparation</p>
+
+    <div class="hero_btns">
+      <a href="#papers" class="btn_primary">Explore Papers</a>
+      <a href="#contact" class="btn_secondary">Contact</a>
+    </div>
+  </div>
+</section>
+ <section class="year">
+  <button class="button_year" onclick="filterPaper('all')">All</button>
+  <button class="button_year" onclick="filterPaper('year1')" >1st year</button>
+  <button class="button_year"onclick="filterPaper('year2')" >2nd year</button>
+  <button class="button_year" onclick="filterPaper('year3')" >3rd year</button>
+
+ </section>
+ <section class="papers" id="papers" >
+  <!-- 1st year  -->
+<div class="card year1">
+  <div class="card_img">
+    <img src="paper.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/1ruahHkwdjEFeIFqHTDFi32kc2aqvFWux/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3>BCA 1ST SEM ALL PAPER</h3>
+  <p>BCA 1st Year</p>
+
+</div>
+<div class="card year1">
+  <div class="card_img">
+    <img src="paper.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/1IyfVa5T0EuMdy4irDz4QifOCL2Ze7lii/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3>BCA 2nd SEM ALL PAPER </h3>
+  <p>BCA 1st Year</p>
+
+</div>
+<!-- 2nd year  -->
+<div class="card year2">
+  <div class="card_img">
+    <img src="paper.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/1LJ9CPbJobruaqCC0PhrWetW4EE0_rJ0O/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3>BCA 3rd SEM ALL PAPER</h3>
+  <p>BCA 2nd Year</p>
+
+</div>
+<div class="card year2">
+  <div class="card_img">
+    <img src="paper.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/1MfV6OM5u35cQy2zjX2cNVtoN32RRba7E/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3>BCA 4th SEM ALL PAPER </h3>
+  <p>BCA 2nd Year</p>
+
+</div>
+<!-- 3rd year  -->
+<div class="card year3">
+  <div class="card_img">
+    <img src="paper.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/1mJTNLHF4QmdQayo24Gqvrak49vvdKall/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3>BCA 5th SEM ALL PAPER </h3>
+  <p>BCA 3rd Year</p>
+
+</div>
+<div class="card year3">
+  <div class="card_img">
+    <img src="paper.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/1n5c51zLMszezhttqU2nf32Nc3ZarGlQx/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3>BCA 6th SEM ALL PAPER </h3>
+  <p>BCA 3rd Year</p>
+
+</div>
+<p id="noResult" style="display:none; text-align:center; margin-top:20px;">
+  ❌ No papers found 
+</p>
+
+</section>
+
+</main>
+
+<footer>
+  <hr> 
+  <section class="about" id="about">
+  <div class="glass">
+    <h2>About Nitin Papers</h2>
+
+    <p>
+      Nitin Papers is a platform dedicated to BCA students where you can find 
+      previous year question papers in an organized and easy-to-use format.
+    </p>
+
+    <p>
+      Our mission is to help students save time and improve exam preparation by 
+      providing quick access to important study materials.
+    </p>
+
+    <p>
+      This website is created and managed by Nitin Jangid.
+    </p>
+  </div>
+</section>
+  <hr>
+    <section class="contact" id="contact">
+      <div class="glass" >
+  <h2>Contact Me</h2>
+
+  <p>👤 NAME - NITIN JANGID</p>
+  <p>📞 PHONE - 6375823769</p>
+  <p>📧 EMAIL - nitinjangid7878@gmail.com</p>
+
+  <div class="touch">
+    <a href="https://www.instagram.com/_dark_nitin/" class="text_link">
+      <img class="touch_logo" src="https://constant.myntassets.com/web/assets/img/b4fcca19-5fc1-4199-93ca-4cae3210ef7f1574604275408-insta.png">
+      Follow on Instagram
+    </a>
+
+    <a href="https://www.linkedin.com/in/nitin-jangid-319993376/" target="_blank" class="text_link">
+  <img class="touch_logo" 
+  src="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
+  alt="LinkedIn">
+  Follow on LinkedIn
+</a>
+  </div>
+</div>
+</section>
+</footer>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
+
+import {
+    getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged ,
+   GoogleAuthProvider,
+  signInWithPopup 
+} from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
+
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  getDoc
+}
+from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDkVGnoqxI1nYkW9rHTjh1UIz72j2boTRI",
+  authDomain: "bca-paper1.firebaseapp.com",
+  projectId: "bca-paper1",
+  storageBucket: "bca-paper1.firebasestorage.app",
+  messagingSenderId: "1075119482228",
+  appId: "1:1075119482228:web:451baef24ec256f89bb821",
+  measurementId: "G-7PJFFY682Y"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
+window.openLogin = function(){
+  document.getElementById("loginPopup").style.display = "flex";
+};
+
+window.closeLogin = function(){
+  document.getElementById("loginPopup").style.display = "none";
+};
+// google login
+window.googleLogin = async function(){
+
+  try{
+    const result = await signInWithPopup(auth, provider);
+    const user = result.user;
+
+    await setDoc(doc(db, "users", user.uid), {
+      name: user.displayName,
+      email: user.email,
+      photoURL: user.photoURL
+    }, { merge: true });
+
+    closeLogin();
+
+  }catch(error){
+    document.getElementById("msg").innerText = error.message;
+  }
+
+};
+/* LOGIN POPUP */
+window.login = function(){
+
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  signInWithEmailAndPassword(auth, email, password)
+  .then(() => {
+    document.getElementById("msg").innerText = "Login Successful ✅";
+    setTimeout(() => {
+    closeLogin();
+  }, 700);
+  })
+  .catch((error) => {
+    document.getElementById("msg").innerText = error.message;
+  });
+
+};
+
+/* SIGNUP */
+window.signup = async function(){
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  try{
+    const userCredential =
+    await createUserWithEmailAndPassword(auth, email, password);
+
+    const user = userCredential.user;
+
+    await setDoc(doc(db, "users", user.uid), {
+      name: name,
+      email: email
+    });
+    console.log("Firestore Data Saved");
+
+    document.getElementById("msg").innerText = "Signup Successful ✅";
+    closeLogin();
+
+  }catch(error){
+    document.getElementById("msg").innerText = error.message;
+  }
+
+};
+
+/* LOGOUT */
+window.logout = function(){
+
+  signOut(auth)
+  .then(() => {
+    alert("Logout Successful");
+  });
+
+};
+
+/* PROFILE SIDEBAR */
+window.openProfile = function(){
+  document.getElementById("profileSidebar").classList.add("active");
+};
+
+window.closeProfile = function(){
+  document.getElementById("profileSidebar").classList.remove("active");
+};
+
+const userPhoto = document.getElementById("userPhoto");
+
+if(userPhoto){
+  userPhoto.addEventListener("click", openProfile);
+}
+
+/* PHOTO UPLOAD */
+const upload = document.getElementById("photoUpload");
+
+if(upload){
+  upload.addEventListener("change", function(){
+
+    const file = this.files[0];
+
+    if(file){
+
+      const reader = new FileReader();
+
+      reader.onload = function(e){
+
+        document.getElementById("profilePreview").src = e.target.result;
+        document.getElementById("userPhoto").src = e.target.result;
+
+        localStorage.setItem("userPhoto_" + auth.currentUser.uid, e.target.result);
+      };
+
+      reader.readAsDataURL(file);
+    }
+
+  });
+}
+
+
+/* FIREBASE USER STATE */
+onAuthStateChanged(auth, async (user) => {
+
+  const loginBtn = document.getElementById("loginBtn");
+  const userPhoto = document.getElementById("userPhoto");
+
+  if(user){
+    const savedPhoto = localStorage.getItem("userPhoto_" + user.uid);
+
+    loginBtn.style.display = "none";
+    userPhoto.style.display = "block";
+
+    const docRef = doc(db, "users", user.uid);
+    const docSnap = await getDoc(docRef);
+
+    if(docSnap.exists()){
+      const data = docSnap.data();
+      document.getElementById("userName").innerText = data.name;
+      document.getElementById("userEmail").innerText = data.email;
+    }
+
+    userPhoto.src = savedPhoto || user.photoURL || "default-profile.jpg";
+    document.getElementById("profilePreview").src =
+      savedPhoto || user.photoURL || "default-profile.jpg";
+
+  } else {
+
+    loginBtn.style.display = "block";
+    userPhoto.style.display = "none";
+
+    document.getElementById("userName").innerText = "User";
+    document.getElementById("userEmail").innerText = "user@email.com";
+  }
+});
+
+/* FILTER PAPERS */
+window.filterPaper = function(year){
+
+  let cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+
+    if(year === "all" || card.classList.contains(year)){
+      card.classList.remove("hide");
+      card.classList.add("show");
+      card.style.display = "block";
+    }
+    else{
+      card.classList.remove("show");
+      card.classList.add("hide");
+
+      setTimeout(() => {
+        card.style.display = "none";
+      }, 300);
+    }
+
+  });
+};
+
+/* SEARCH PAPERS */
+window.searchPaper = function(){
+
+  let input = document.querySelector(".search_input").value.toLowerCase();
+  let cards = document.querySelectorAll(".card");
+  let found = false;
+
+  cards.forEach(card => {
+
+    let title = card.querySelector("h3");
+    let para = card.querySelector("p");
+
+    title.innerHTML = title.innerText;
+    para.innerHTML = para.innerText;
+
+    let text = (title.innerText + para.innerText).toLowerCase();
+
+    if(text.includes(input)){
+      card.style.display = "block";
+      found = true;
+
+      if(input !== ""){
+        let regex = new RegExp(input, "gi");
+
+        title.innerHTML = title.innerText.replace(
+          regex,
+          match => `<span class="highlight">${match}</span>`
+        );
+
+        para.innerHTML = para.innerText.replace(
+          regex,
+          match => `<span class="highlight">${match}</span>`
+        );
+      }
+
+    } else {
+      card.style.display = "none";
+    }
+
+  });
+
+  document.getElementById("noResult").style.display = found ? "none" : "block";
+};
+
+</script>
+<div class="login_popup" id="loginPopup">
+  <div class="login_card">
+    <span class="close_btn" onclick="closeLogin()">×</span>
+
+    <h2>Welcome Back</h2>
+    <p>Login or create your account</p>
+
+     <input type="text"
+       id="name"
+       placeholder="Enter Your Name">
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
+<p id="msg"></p>
+    <button onclick="login()" class="login_btn">Login</button>
+    <button onclick="googleLogin()" class="google_btn">
+  Continue with Google
+</button>
+    <button onclick="signup()" class="signup_btn">Create Account</button>
+  </div>
+</div>
+</body>
+</html>

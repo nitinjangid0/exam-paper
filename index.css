@@ -1,0 +1,802 @@
+
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+
+}
+body{
+   background: radial-gradient(circle at top left, #1e293b, #020617);
+}
+body::before {
+  content: "";
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: rgba(56, 189, 248, 0.3);
+  filter: blur(120px);
+  top: 10%;
+  left: 10%;
+  z-index: -1;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+header{
+  background-color: #2563eb;
+   position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.highlight{
+  background-color: yellow;
+  color: black;
+}
+
+/* Navbar */
+.nav_bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px ;
+  border: px solid black;
+  border-radius: 5px;
+  
+}
+
+/* Left & Right item */
+.nav_item{
+  display: flex;
+  gap: 40px;
+  justify-content: space-evenly;
+  
+  
+}
+
+/* Links */
+.nav_bar a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Logo Center */
+.logo_box{
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.nitin_logo{
+  height: 80px;
+  border-radius: 20px;
+}
+/* search bar  */
+.search_bar{
+  height: 39px;
+  min-width: 200px;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  
+}
+/* search icon  */
+.search_icon{
+    box-sizing: content-box;
+   height: 21px ;
+   padding: 10px;
+   background-color: #f5f5f6;
+   color: #282c3f;
+   border-radius: 4px 0 0 4px;
+   /* border: 10px #85ebb5 solid ; */
+   
+  }
+   /* search input  */
+   .search_input{
+
+    flex-grow: 1;
+
+    height: 42px;
+
+    padding: 0 18px;
+
+    background: rgba(255,255,255,0.9);
+
+    border: 2px solid rgba(255,255,255,0.3);
+
+    border-radius: 15px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 15px rgba(255,255,255,0.15);
+
+    transition: 0.3s ease;
+
+}
+.search_input:focus{
+
+    border-color: white;
+
+    box-shadow: 0 0 20px rgba(255,255,255,0.35);
+
+    transform: scale(1.02);
+
+}
+.search_input::placeholder{
+
+    color: #555;
+
+    font-weight: 500;
+
+}
+   /*hero = after nav bar   */
+   .hero{
+    height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(135deg, #020617, #0f172a, #1e293b);
+  overflow: hidden;
+  background: url('bgi.png') no-repeat center/cover;
+    
+   }
+   .hero::before{
+   content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(56, 189, 248, 0.3);
+  filter: blur(120px);
+  top: 10%;
+  left: 20%;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(34, 197, 94, 0.3);
+  filter: blur(120px);
+  bottom: 10%;
+  right: 20%;
+}
+.hero_content {
+  max-width: 700px;
+  color: white;
+  z-index: 1;
+}
+
+.hero *{
+  position: relative;
+  color: white;
+}
+   .hero h1{
+  font-size: 48px;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Standard version (for modern browsers) */
+  background-clip: text;
+  color: transparent;
+  
+  
+}
+
+.hero p{
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #cbd5f5;
+}
+.hero_btns {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn_primary {
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #38bdf8, #22c55e);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn_primary:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+}
+
+.btn_secondary {
+  padding: 12px 25px;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn_secondary:hover {
+  background: #38bdf8;
+  color: black;
+}
+
+.hero_btns a{
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+}
+/* year = buttons to find paper  */
+.year{
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 20px;
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+  border-radius: 10px ;
+  border: 2px solid  gray ;
+  margin: 20px;
+  
+}
+.button_year{
+  height: 40px;
+  width: 130px;
+  border: none;
+  border-radius: 25px;   /* round buttons  */
+  background-color: white;
+  color: #2563eb;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button_year:hover{
+  background-color: #1e3a8a;
+  color: white;
+  transform: scale(1.1);
+}
+
+.button_year.active{
+  background-color: black;
+  color: white;
+}
+/* ===== GLASS EFFECT BASE ===== */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional hover effect / header  */
+.glass:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+.about::before,
+.contact::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(56, 189, 248, 0.3);
+  filter: blur(100px);
+  top: 20%;
+  left: 10%;
+  z-index: 0;
+}
+.about, .contact {
+  position: relative;
+  overflow: hidden;
+}
+.glass {
+  position: relative;
+  z-index: 1;
+}
+
+  .about {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  text-align: center;
+  color: white;
+}
+
+.about h2{
+ margin-top: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #38bdf8;
+}
+
+.about p{
+   max-width: 700px;
+  margin: 10px auto;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+hr {
+  margin-top: 100px;
+  color: gray;
+}
+
+.contact_hr{
+ display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    color: gray;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    margin-top: 70px;
+}
+
+.contact{
+ padding: 60px 20px;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  text-align: center;
+  color: white;
+}
+
+.contact h2{
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #22c55e;
+}
+
+.contact p{
+background: #0f172a;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 8px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.contact p:hover {
+  background: #1e293b;
+  transform: translateY(-3px);
+}
+
+.contact .touch {
+  margin-top: 20px;
+}
+
+.touch{
+  margin-top: 15px;
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  align-items: center;
+  
+  
+}
+.text_link{
+ 
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: bold;
+
+}
+.text_link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 75, 43, 0.7);
+}
+
+.touch_logo {
+  width: 20px;
+}
+/* Text */
+.card h3{
+  margin: 10px 0;
+}
+
+.card p{
+  color: gray;
+}
+
+/* Button */
+.card a{
+  display: inline-block;
+  margin: 10px;
+  padding: 8px 15px;
+  background-color:#1e3a8a;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+ .card:hover{
+  transform: scale(1.05);
+}
+.card{
+  width: 220px;
+  overflow: hidden;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  margin-top: 10px;
+  transition: all 0.4s ease;
+  
+}
+
+.hide{
+  opacity: 0;
+  transform: scale(0.8);
+  filter: blur(3px);
+}
+
+/* show state */
+.show{
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Image Container */
+.card_img{
+  position: relative;
+}
+
+/* Image */
+.card_img img{
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Download Button on Image */
+.download_btn{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: black;
+  color: white;
+  padding: px px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.card_img img{
+  transition: 0.3s;
+}
+
+.card:hover img{
+  transform: scale(1.05);
+}
+
+/* .papers{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+} */
+
+
+/* mobile media  */ 
+@media (max-width: 768px){
+  /* mobile styles here */
+}
+@media (max-width: 768px){
+  .nav_bar{
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+ .login_open_btn,
+  .logout_btn{
+    width: 130px;
+    height: 45px;
+  }
+
+  .profile_box{
+    margin-left: 0;
+  }
+
+  .nav_item{
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .search_bar{
+    width: 100%;
+  }
+}
+@media (max-width: 768px){
+  .hero{
+    height: 300px;
+
+    padding: 20px;
+    
+  }
+
+  .hero h1{
+    font-size: 24px;
+  }
+
+  .hero p{
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px){
+  .year{
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+
+  .button_year{
+    width: 80%;
+  }
+}
+
+.papers{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding:20px;
+  padding-left: 50px;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .papers{
+    grid-template-columns: 1fr;  /* 1 card per row */
+  }
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.login_open_btn,
+.logout_btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  background: white;
+  color: #2563eb;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+
+.login_popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.login_card {
+  width: 350px;
+  background: white;
+  color: #111;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+.close_btn {
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.login_card input {
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.login_btn,
+.signup_btn {
+  width: 100%;
+  padding: 13px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login_btn {
+  background: #2563eb;
+  color: white;
+ 
+}
+
+.signup_btn {
+  background: #111827;
+  color: white;
+}
+#msg{
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.profile_box{
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+#userPhoto{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* profile wala css  */
+.profile_sidebar{
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 340px;
+  height: 100vh;
+
+  background: #ffffff;
+
+  box-shadow: -10px 0 30px rgba(0,0,0,0.25);
+
+  transition: 0.4s ease;
+
+  z-index: 99999;
+
+  padding: 25px;
+
+  text-align: center;
+}
+
+.profile_sidebar.active{
+  right: 0;
+}
+
+.close_profile{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+
+  font-size: 35px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.profile_img{
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 4px solid #2563eb;
+
+  margin: 30px auto 15px;
+
+  display: block;
+}
+
+#userName{
+  font-size: 24px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 5px;
+}
+
+#userEmail{
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+#photoUpload{
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.profile_sidebar button{
+  width: 100%;
+
+  padding: 12px;
+
+  margin-top: 10px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.profile_sidebar button:hover{
+  background: #1d4ed8;
+}
+@media(max-width:768px){
+
+  .profile_sidebar{
+    width: 100%;
+    right: -100%;
+  }
+
+  .profile_sidebar.active{
+    right: 0;
+  }
+
+}
+
+
+#userPhoto{
+  display:none;
+}
+.google_btn{
+  width: 100%;
+  padding: 13px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: rgb(182, 242, 205);
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (max-width:768px){
+
+  header{
+    position: relative;
+  }
+
+}

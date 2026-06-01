@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notes</title>
+  <link rel="stylesheet" href="notes.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <a href="index.html" class="back_btn">← Home</a>
+  <h1>BCA Notes Hub</h1>
+  <p class="subtitle">
+Download Free Notes & Study Material
+</p>
+<div class="search_bar">
+
+   <input class="search_input"  class="desktop-searchBar" value="" data-reactid="1039"
+        placeholder="Search for notes..." 
+       onkeyup="searchPaper()">
+      </div>
+ <div class="line"></div>
+
+   <section class="papers" id="papers" >
+  
+<div class="card year1">
+  <div class="card_img">
+    <img src="notess.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/1JHAY-Ewq4Wa0MQQQlPpDiqQ5yE7v2w4N/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3>C LANGUAGE NOTES </h3>
+
+</div>
+
+<div class="card year1">
+  <div class="card_img">
+    <img src="notess.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/1Yn6BWGz-VI55O_LC5Sda7f5wAMzfTB6a/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3> C++ LANGUAGE NOTES </h3>
+
+</div>
+<div class="card year1">
+  <div class="card_img">
+    <img src="notess.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/10g1okQX1VkRRKEgiSFLm3m43C5emd0io/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3>HTML LANGUAGE NOTES </h3>
+
+</div>
+<div class="card year1">
+  <div class="card_img">
+    <img src="notess.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/1LYwqsqnJwrcNQQpkMmeUleCla5uPzf3N/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3>CSS LANGUAGE NOTES </h3>
+
+</div>
+<div class="card year1">
+  <div class="card_img">
+    <img src="notess.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/1EYsBKRQPRSWnaaiEnZeuDTDkheliK43U/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3>JAVASCRIPT LANGUAGE NOTES </h3>
+
+</div>
+<div class="card year1">
+  <div class="card_img">
+    <img src="notess.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/1AAdzrjKacMGOWDTVRX8mgnRv2UDIVtol/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3>JAVA LANGUAGE NOTES </h3>
+
+</div>
+<div class="card year1">
+  <div class="card_img">
+    <img src="notess.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/12KnIUu_kgfNDF88hTrzKJEGL6EQuKPeu/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3>PYTHON LANGUAGE NOTES </h3>
+
+</div>
+
+<div class="card year1">
+  <div class="card_img">
+    <img src="notess.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/1vFAL8AoxFh8p7k8ROfTEDL3uB2R5mpWr/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3> Software Engineering NOTES </h3>
+
+</div>
+
+<div class="card year1">
+  <div class="card_img">
+    <img src="notess.jpg" alt="paper">
+    <!-- Overlay Button -->
+    <a href="https://drive.google.com/file/d/14C0bgSwV87Cmqez9sqEyJwEuo18pZkMK/view?usp=sharing" class="download_btn">Download</a>
+  </div>
+  <h3>Operating System NOTES </h3>
+
+</div>
+</section>
+<p id="noResult" style="display:none; text-align:center; color:white; margin-top:20px;">
+  ❌ No notes found
+</p>
+<script>
+  function searchPaper(){
+  let input = document.querySelector(".search_input").value.toLowerCase();
+  let cards = document.querySelectorAll(".card");
+  let found = false;
+
+  cards.forEach(card => {
+    let title = card.querySelector("h3");
+
+    let text = title.innerText.toLowerCase();
+
+    if(text.includes(input)){
+      card.style.display = "block";
+      found = true;
+    }else{
+      card.style.display = "none";
+    }
+  });
+
+  document.getElementById("noResult").style.display = found ? "none" : "block";
+}
+</script>
+</body>
+</html>
